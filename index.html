@@ -9,8 +9,12 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <style>
         body {
+            margin: 0;
+            padding: 0;
             background-size: cover;
-            height: 100vh;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
         }
     </style>
 </head>
@@ -25,8 +29,8 @@
             </form>
         </div>
     </nav>
-    <div class="container-fluid bg-black bg-opacity-50">
-        <div class="container mb-4">
+    <div class="container-fluid min-vh-100 bg-black bg-opacity-50">
+        <div class="container">
             <h1 class="py-4 text-center text-white ">Weather of <span id="cityName"></span></h1>
             <main>
                 <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
