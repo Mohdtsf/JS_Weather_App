@@ -2,8 +2,8 @@
 
 WELCOME HERE!!
 
-This is a simple website that allows you to check weather a YouTube channel is monetized or not! You can apply for pull requests and make changes and make this website work better.
+This is a simple website that allows you to check the weather of any place! You can apply for pull requests and make changes to make this website work better.
 
-Go to issue section and fix issues!
+Go to the issue section and fix issues!
 
 HAPPY CODING!! HAPPY HACKTOBER!!
