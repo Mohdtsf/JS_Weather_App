@@ -6,6 +6,8 @@ const options = {
     }
 };
 const getWeather = (city) => {
+    // Show loading animation
+    document.getElementById("loading").style.display = "block";
 
     //Getting City name from search
     cityName.innerHTML = city
@@ -32,8 +34,15 @@ const getWeather = (city) => {
             wind_degrees.innerHTML = response.wind_degrees
             sunrise.innerHTML = sunriseTime.toLocaleTimeString()
             sunset.innerHTML = sunsetTime.toLocaleTimeString()
+
+            // Hide loading animation after loading is complete
+            document.getElementById("loading").style.display = "none";
         })
-        .catch(err => console.error(err));
+        .catch(err => {
+            console.error(err);
+            // Hide loading animation in case of an error
+            document.getElementById("loading").style.display = "none";
+        });
 }
 
 // Getting city name by user
