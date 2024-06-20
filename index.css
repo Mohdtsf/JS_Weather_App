@@ -1,95 +1,117 @@
+/* Body */
+body {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
 /* Navbar */
 .navbar {
-    transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 
 .navbar:hover {
-    background: rgba(0, 0, 0, 0.9); /* Darken the background color on hover */
-    color: #fff;
+  background: rgba(0, 0, 0, 0.9); /* Darken the background color on hover */
+  color: #fff;
 }
 
 /* Input Field */
 .form-control {
-    transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 
 .form-control:hover {
-    background: rgba(255, 255, 255, 0.3); /* Slightly change the background color on hover */
-    color: #fff;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* Slightly change the background color on hover */
+  color: #fff;
 }
 
 /* Button */
 .btn-secondary {
-    transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .btn-secondary:hover {
-    background: #0056b3;
+  background: #0056b3;
 }
 
 /* Cards */
 .card {
-    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.05); /* Enlarge the card on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  transform: scale(1.05); /* Enlarge the card on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
 /* Headings */
-h1, h2 {
-    transition: color 0.3s, transform 0.3s;
+h1,
+h2 {
+  transition: color 0.3s, transform 0.3s;
 }
 
-h1:hover, h2:hover {
-    transform: scale(1.02) translateY(-3px); /* Slightly enlarge the headings on hover */
-    color: #0066ff; /* Change heading color on hover */
+h1:hover,
+h2:hover {
+  transform: scale(1.02) translateY(-3px); /* Slightly enlarge the headings on hover */
+  color: #0066ff; /* Change heading color on hover */
 }
 
 .table {
-    max-height: none;
-    overflow: hidden;
+  max-height: none;
+  overflow: hidden;
 }
 
 /* Table Headings */
 .table th {
-    transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 
 .table th:hover {
-    color: #fff;
+  color: #fff;
 }
 
 /* Table Rows */
 .table tr {
-    transition: transform 0.3s, box-shadow 0.3s;
-    height: 40px; /* Reduce the height of table rows */
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 40px; /* Reduce the height of table rows */
 }
 
 .table tr:hover {
-    transform: scale(1.02) translateY(-3px); /* Slightly enlarge table rows on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adjust shadow effect */
-    color: #fff; /* Change text color on hover */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Add a glowing effect */
+  transform: scale(1.02) translateY(-3px); /* Slightly enlarge table rows on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adjust shadow effect */
+  color: #fff; /* Change text color on hover */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Add a glowing effect */
 }
 
 /* First Column of the Table (including headers and data cells) */
-.table td:first-child, .table th:first-child {
-    text-align: center !important; /* Force center alignment for text */
+.table td:first-child,
+.table th:first-child {
+  text-align: center !important; /* Force center alignment for text */
 }
 
 /* Loading Animation Style */
 .loading-animation {
-    width: 30px;
-    height: 30px;
-    border: 5px solid #fff;
-    border-top: 5px solid #0056b3;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+  width: 30px;
+  height: 30px;
+  border: 5px solid #fff;
+  border-top: 5px solid #0056b3;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
