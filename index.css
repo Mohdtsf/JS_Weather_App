@@ -99,19 +99,13 @@ h2:hover {
 
 /* Loading Animation Style */
 .loading-animation {
-  width: 30px;
-  height: 30px;
-  border: 5px solid #fff;
-  border-top: 5px solid #0056b3;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  background: #fff url(Loading\ Gif.gif);
+  background-size: 10%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
 }

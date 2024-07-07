@@ -4,10 +4,18 @@ const client_id = "_AE7sCO8tWFmAiWkdlve6pwwCOhJMeo8lmEBRQhSgls";
 // for Weathr data
 const API_key = "bff141d1f5b5a5b33765029b0ce71b58";
 
-const getWeather = (city) => {
-  // Show loading animation
-  document.getElementById("loading").style.display = "block";
+// Show loading animation
+let loader = document.getElementById("loading");
 
+// Hide loading animation after loading is complete
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    // Hide loading animation after loading is complete
+    loader.style.display = "none";
+  }, 6500);
+});
+
+const getWeather = (city) => {
   //Getting City name from search
   cityName.innerHTML = city;
 
@@ -20,7 +28,7 @@ const getWeather = (city) => {
       console.log(response);
 
       // For getting random image of th searched city
-      let x = Math.floor(Math.random() * 10 + 1);
+      let x = Math.floor(Math.random() * 10);
 
       // for chnaging the background image dynamically same as the city which is searchd
       document.body.style.backgroundImage = `url(${response.results[x].urls.raw})`;
@@ -52,14 +60,9 @@ const getWeather = (city) => {
       wind_degrees.innerHTML = response.wind.deg;
       sunrise.innerHTML = sunriseTime.toLocaleTimeString();
       sunset.innerHTML = sunsetTime.toLocaleTimeString();
-
-      // Hide loading animation after loading is complete
-      document.getElementById("loading").style.display = "none";
     })
     .catch((err) => {
       console.error(err);
-      // Hide loading animation in case of an error
-      document.getElementById("loading").style.display = "none";
     });
 };
 
@@ -67,6 +70,12 @@ const getWeather = (city) => {
 
 submit.addEventListener("click", (e) => {
   e.preventDefault();
+  // Show loading animation on click
+  document.getElementById("loading").style.display = "block";
+  setTimeout(() => {
+    // Hide loading animation after loading is complete
+    document.getElementById("loading").style.display = "none";
+  }, 6500);
   getWeather(city.value);
 });
 
